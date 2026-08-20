@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapSave - Social Media Video Downloader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+
+  <main class="container">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">&#9660;</span>
+        <span class="logo-text">Snap<span>Save</span></span>
+      </div>
+      <p class="tagline">Paste any social media link and download the video instantly</p>
+    </header>
+
+    <section class="downloader">
+      <div class="input-wrap">
+        <input
+          id="urlInput"
+          type="url"
+          placeholder="Paste video link here... (YouTube, Instagram, TikTok, Facebook, X, Reddit and more)"
+          autocomplete="off"
+        />
+        <button id="fetchBtn" class="btn-primary">Get Video</button>
+      </div>
+      <p class="hint">Supported: YouTube, Instagram, TikTok, Facebook, X (Twitter), Reddit, Pinterest and 1000+ sites</p>
+    </section>
+
+    <section id="loading" class="card hidden">
+      <div class="spinner"></div>
+      <p>Fetching video info...</p>
+    </section>
+
+    <section id="errorBox" class="error hidden"></section>
+
+    <section id="result" class="card hidden">
+      <div class="result-body">
+        <div class="thumb-wrap">
+          <img id="thumbnail" alt="Video thumbnail" />
+          <span id="duration" class="duration-badge"></span>
+        </div>
+        <div class="meta">
+          <h2 id="videoTitle"></h2>
+          <p id="uploader" class="uploader"></p>
+          <label for="formatSelect">Choose quality:</label>
+          <select id="formatSelect"></select>
+          <button id="downloadBtn" class="btn-primary btn-download">Download Video</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>SnapSave is a private tool. Please respect copyright and platform terms of service.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
